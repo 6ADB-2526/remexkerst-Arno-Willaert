@@ -47,6 +47,15 @@ def add_result(request):
 
     return HttpResponse("er is een nieuw resultaat aangemaakt")
 
-
+@csrf_exempt
 def result_player(request, idSpeler, matchCode):
-    
+    gekregen_Speler = speler.objects.get(pk = idSpeler)
+    gekregen_MatchCode = match_punten.objects.get(pk = matchCode)
+    MD_speler = model_to_dict(gekregen_Speler)
+    MD_speler["id"] = model_to_dict(gekregen_MatchCode["punten"])
+    return JsonResponse(MD_speler)
+
+
+def punten_speler(request, idSpeler):
+    gekregen_speler = speler.objects.get(pk = idSpeler)
+    gekregen_match = match_punten.objects.all.value()
