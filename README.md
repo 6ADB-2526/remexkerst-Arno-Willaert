@@ -15,8 +15,8 @@ Winnen ze de match krijgen ze 4p, gelijkspel 2p, verlies = 0 maar wordt ook gere
 
 | endpoint      | resultaat      |
 | ------------- | ------------- |
-| speler/add | een speler toevoegen |
-| speler/<<int:id>> | de gegevens van een speler op basis van zijn id |
-| speler/ | een array van alle spelers |
-| matchPunten/resultaat/<<int:idSpeler>>/<<int:matchCode>> | het resultaat opvragen van een speler op een match  |
+| speler/add | een speler toevoegen |                                                                                       #werkt
+| speler/<<int:id>> | de gegevens van een speler op basis van zijn id |                                                     #werkt
+| speler/ | een array van alle spelers |                                                                                    #werkt
+| matchPunten/resultaat/<<int:idSpeler>>/<<int:matchCode>> | het resultaat opvragen van een speler op een match  |          
 | punten/<<int:idSpeler>> | 1 resultaat= totaal van die speler |
